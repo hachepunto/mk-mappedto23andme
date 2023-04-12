@@ -1,0 +1,8 @@
+#!/bin/sh
+
+find -L data/ \
+	-name '*.ped' \
+	| sed -r \
+	-e 's#^data#results#' \
+	-e 's#.ped#.23andme.txt#'
+
