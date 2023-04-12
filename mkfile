@@ -7,6 +7,4 @@ results/%.23andme.txt: data/%.map data/%.ped
 		--file 'data/'$stem \
 		--recode 23 \
 		--out 'results/build_'$stem'.23andme' \
-	&& mv 'results/build_'$stem'.23andme.txt' $target
- 
-
+	&& rename s#build_## results/*$stem*
